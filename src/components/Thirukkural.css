@@ -80,6 +80,7 @@
     font-size: 1.4rem;
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 8px;
     color: #2c3e50;
 }
 
@@ -216,6 +217,14 @@
     .view-more-btn {
         font-size: 0.9rem;
         padding: 10px 15px;
+    }
+
+    .explanation-selection{
+        display: flex;
+        flex-direction: column;
+    }
+    .explanation-selection label{
+        display: flex;
     }
 }
 

@@ -118,8 +118,8 @@ function App() {
       {/* <MeasurementConverter/> */}
       {/* <DataFetch/> */}
       {/* <TodoList /> */}
-      {/* <Thirukkural/> */}
-      <TodoApp/>
+      <Thirukkural/>
+      {/* <TodoApp/> */}
     </div>
   );
 }

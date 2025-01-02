@@ -1,0 +1,231 @@
+/* Main container for the Kural */
+.kural-container {
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    padding: 20px;
+    text-align: left;
+    background-color: #f9f9f9; /* Light background for better readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Loader Styles */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Kural Card Styling */
+.kural-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kural-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Kural Header: Number and Adhikaram */
+.kural-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.kural-number {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.adhikaram {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Section Titles (Kural and Porul) */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+/* Styling for the Kural lines */
+.line1, .line2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Explanation */
+.mk {
+    margin: 15px 0;
+    color: #686b6c;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Button styling for "View More" */
+.view-more-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.view-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.5);
+}
+
+/* Translation Text */
+.translation {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    color: #34495e;
+}
+
+/* Error Message */
+.error-message {
+    font-size: 1.2rem;
+    color: red;
+    font-weight: bold;
+}
+
+/* Explanation Radio Button Styles */
+.explanation-selection {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.explanation-selection label {
+    margin-right: 20px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.explanation-selection input {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Editable Kural Number */
+.kural-number input {
+    font-size: 1.2rem;
+    width: 80px;
+    text-align: center;
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.kural-number input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Styling for Adhikaram dropdown */
+.adhikaram-select {
+    font-size: 1.2rem;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.adhikaram-select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .kural-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .kural-header {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+
+    .kural-number,
+    .adhikaram {
+        margin-bottom: 10px;
+    }
+
+    .line1, .line2 {
+        font-size: 1.2rem;
+    }
+
+    .view-more-btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .kural-header {
+        font-size: 0.9rem;
+    }
+
+    .line1, .line2 {
+        font-size: 1rem;
+    }
+}

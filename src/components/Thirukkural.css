@@ -205,6 +205,9 @@
     .adhikaram {
         margin-bottom: 10px;
     }
+    .adhikaram-select{
+        width: 280px;
+    }
 
     .line1, .line2 {
         font-size: 1.2rem;

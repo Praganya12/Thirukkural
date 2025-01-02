@@ -41,4 +41,3 @@ next-env.d.ts
 src/components/DataFetch.tsx
 src/dummy.tsx
 src/components/TodoApp.tsx
-src/components/Thirukkural.tsx

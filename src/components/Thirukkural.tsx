@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { thirukkural, details } from "../data/thirukkural.js";
 import './Thirukkural.css'
+interface Kural {
+    Number: number;
+    Line1: string;
+    Line2: string;
+    Translation: string;
+    [key: string]: string | number;
+}
+
+
+
 
 const Thirukkural = () => {
-    const [kural, setKural] = useState("");
+    const [kural, setKural] = useState<Kural | null>(null);
     const [adhikaram, setAdhikaram] = useState("");
     const [loading, setLoading] = useState(true);
     const [selectedExplanation, setSelectedExplanation] = useState("mv");
@@ -14,7 +24,8 @@ const Thirukkural = () => {
     const [errorMessage, setErrorMessage] = useState("");
 
     const kuralToAdhikaram = {};
-    const adhikaramList = [];
+    const adhikaramList: string[] = [];
+
 
     // map adhikaram details and dropdown
     details.forEach(section => {
@@ -172,7 +183,8 @@ const Thirukkural = () => {
                         {showTranslation ? "Show Less" : "View More Details"}
                     </button>   
 
-                    {showTranslation && <p className='translation'>Translation:  {kural.Translation}</p>}
+                    {showTranslation && <p className='translation'>Translation: {kural.Translation}</p>}
+
 
                 </div>
             ) : (
